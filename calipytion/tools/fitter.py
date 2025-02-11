@@ -367,7 +367,7 @@ if __name__ == "__main__":
     # Step 2: Get the critical points (assumes model.calculate_critical_points() returns critical x values)
     critical_points = model.calculate_critical_points()
     # build array of x and y values for the critical points
-    critical_y = [model.predict([cp[0]]) for cp in critical_points]
+    critical_y = [model.predict(np.array([cp[0]])) for cp in critical_points]
     critical_x = [cp[0] for cp in critical_points]
 
     # Calculate the corresponding y values for the critical points using the model

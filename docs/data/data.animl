@@ -18,7 +18,7 @@
     </Sample>
   </SampleSet>
   <ExperimentStepSet>
-    <ExperimentStep name="Standard of c = 0.0 mmol / l measured at 420 nm" experimentStepID="step0000">
+    <ExperimentStep name="Standard of c = 0.0 mmol / l measured at 420.0 nm" experimentStepID="step0000">
       <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
       <Infrastructure>
         <SampleReferenceSet>
@@ -60,7 +60,7 @@
         </Category>
       </Result>
     </ExperimentStep>
-    <ExperimentStep name="Standard of c = 0.5 mmol / l measured at 420 nm" experimentStepID="step0001">
+    <ExperimentStep name="Standard of c = 0.5 mmol / l measured at 420.0 nm" experimentStepID="step0001">
       <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
       <Infrastructure>
         <SampleReferenceSet>
@@ -102,7 +102,7 @@
         </Category>
       </Result>
     </ExperimentStep>
-    <ExperimentStep name="Standard of c = 1.0 mmol / l measured at 420 nm" experimentStepID="step0002">
+    <ExperimentStep name="Standard of c = 1.0 mmol / l measured at 420.0 nm" experimentStepID="step0002">
       <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
       <Infrastructure>
         <SampleReferenceSet>
@@ -144,7 +144,7 @@
         </Category>
       </Result>
     </ExperimentStep>
-    <ExperimentStep name="Standard of c = 1.5 mmol / l measured at 420 nm" experimentStepID="step0003">
+    <ExperimentStep name="Standard of c = 1.5 mmol / l measured at 420.0 nm" experimentStepID="step0003">
       <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
       <Infrastructure>
         <SampleReferenceSet>
@@ -186,7 +186,7 @@
         </Category>
       </Result>
     </ExperimentStep>
-    <ExperimentStep name="Standard of c = 2.0 mmol / l measured at 420 nm" experimentStepID="step0004">
+    <ExperimentStep name="Standard of c = 2.0 mmol / l measured at 420.0 nm" experimentStepID="step0004">
       <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
       <Infrastructure>
         <SampleReferenceSet>
@@ -228,7 +228,7 @@
         </Category>
       </Result>
     </ExperimentStep>
-    <ExperimentStep name="Standard of c = 2.5 mmol / l measured at 420 nm" experimentStepID="step0005">
+    <ExperimentStep name="Standard of c = 2.5 mmol / l measured at 420.0 nm" experimentStepID="step0005">
       <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
       <Infrastructure>
         <SampleReferenceSet>
@@ -270,7 +270,7 @@
         </Category>
       </Result>
     </ExperimentStep>
-    <ExperimentStep name="Standard of c = 3.0 mmol / l measured at 420 nm" experimentStepID="step0006">
+    <ExperimentStep name="Standard of c = 3.0 mmol / l measured at 420.0 nm" experimentStepID="step0006">
       <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
       <Infrastructure>
         <SampleReferenceSet>
@@ -312,7 +312,7 @@
         </Category>
       </Result>
     </ExperimentStep>
-    <ExperimentStep name="Standard of c = 3.5 mmol / l measured at 420 nm" experimentStepID="step0007">
+    <ExperimentStep name="Standard of c = 3.5 mmol / l measured at 420.0 nm" experimentStepID="step0007">
       <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
       <Infrastructure>
         <SampleReferenceSet>
@@ -368,37 +368,7 @@
               <F>1.0</F>
             </Parameter>
             <Parameter name="Standard error" parameterType="float">
-              <F>0.07286944288841404</F>
-            </Parameter>
-            <Parameter name="Lower bound" parameterType="float">
-              <F>-100000000.0</F>
-            </Parameter>
-            <Parameter name="Upper bound" parameterType="float">
-              <F>100000000.0</F>
-            </Parameter>
-            <Parameter name="b" parameterType="float">
-              <F>0.05644586682319641</F>
-            </Parameter>
-            <Parameter name="Initial value" parameterType="float">
-              <F>1.0</F>
-            </Parameter>
-            <Parameter name="Standard error" parameterType="float">
-              <F>0.04919958508978285</F>
-            </Parameter>
-            <Parameter name="Lower bound" parameterType="float">
-              <F>-100000000.0</F>
-            </Parameter>
-            <Parameter name="Upper bound" parameterType="float">
-              <F>100000000.0</F>
-            </Parameter>
-            <Parameter name="d" parameterType="float">
-              <F>0.020242556929588318</F>
-            </Parameter>
-            <Parameter name="Initial value" parameterType="float">
-              <F>1.0</F>
-            </Parameter>
-            <Parameter name="Standard error" parameterType="float">
-              <F>0.02654451691749067</F>
+              <F>0.07286944288841417</F>
             </Parameter>
             <Parameter name="Lower bound" parameterType="float">
               <F>-100000000.0</F>
@@ -413,7 +383,37 @@
               <F>1.0</F>
             </Parameter>
             <Parameter name="Standard error" parameterType="float">
-              <F>0.009588191936673271</F>
+              <F>0.009588191936673311</F>
+            </Parameter>
+            <Parameter name="Lower bound" parameterType="float">
+              <F>-100000000.0</F>
+            </Parameter>
+            <Parameter name="Upper bound" parameterType="float">
+              <F>100000000.0</F>
+            </Parameter>
+            <Parameter name="d" parameterType="float">
+              <F>0.020242556929588318</F>
+            </Parameter>
+            <Parameter name="Initial value" parameterType="float">
+              <F>1.0</F>
+            </Parameter>
+            <Parameter name="Standard error" parameterType="float">
+              <F>0.026544516917490768</F>
+            </Parameter>
+            <Parameter name="Lower bound" parameterType="float">
+              <F>-100000000.0</F>
+            </Parameter>
+            <Parameter name="Upper bound" parameterType="float">
+              <F>100000000.0</F>
+            </Parameter>
+            <Parameter name="b" parameterType="float">
+              <F>0.05644586682319641</F>
+            </Parameter>
+            <Parameter name="Initial value" parameterType="float">
+              <F>1.0</F>
+            </Parameter>
+            <Parameter name="Standard error" parameterType="float">
+              <F>0.04919958508978309</F>
             </Parameter>
             <Parameter name="Lower bound" parameterType="float">
               <F>-100000000.0</F>
