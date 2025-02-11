@@ -189,14 +189,14 @@ class UnitDefinition(_UnitDefinition):
         """
 
         numerator = [
-            self._map_prefix(base.scale)
+            self._map_prefix(base.scale if base.scale is None else int(base.scale))
             + self._map_name(base.kind)
             + self._exponent(base.exponent)
             for base in self.base_units
             if base.exponent > 0
         ]
         denominator = [
-            self._map_prefix(base.scale)
+            self._map_prefix(base.scale if base.scale is None else int(base.scale))
             + self._map_name(base.kind)
             + self._exponent(base.exponent)
             for base in self.base_units
@@ -217,15 +217,7 @@ class UnitDefinition(_UnitDefinition):
 
     @staticmethod
     def _map_prefix(scale: int | None) -> str:
-        """Map a scale to its corresponding prefix.
-
-        Args:
-            scale (int): The scale value to map.
-
-        Returns:
-            str: The corresponding prefix.
-        """
-
+        """Map a scale to its corresponding prefix."""
         if scale is None:
             return ""
 

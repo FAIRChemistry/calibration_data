@@ -1,9 +1,10 @@
 import importlib.resources as pkg_resources
+from typing import Any
 
 import toml
 
 
-def read_static_file(path, filename: str):
+def read_static_file(path, filename: str) -> dict[str, Any]:
     """Reads a static file from the specified library path.
 
     Args:
