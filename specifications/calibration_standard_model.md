@@ -3,7 +3,7 @@ repo: "https://github.com/FAIRChemistry/CaliPytion"
 prefix: "calipy"
 ---
 
-# Standard Data Model
+# Calibration Data Model
 
 This data model structures data of standard measurements of a molecule.
 

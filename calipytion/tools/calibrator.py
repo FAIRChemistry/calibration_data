@@ -16,7 +16,6 @@ from pyenzyme import DataTypes, EnzymeMLDocument
 from rich.console import Console
 from rich.table import Table
 
-from calipytion.ioutils.animlio import get_animl_document, map_standard_to_animl
 from calipytion.model import (
     CalibrationModel,
     CalibrationRange,
@@ -262,15 +261,11 @@ class Calibrator(BaseModel):
         for measurement in enzmldoc.measurements:
             for measured_species in measurement.species_data:
                 if measured_species.species_id == self.molecule_id:
-                    assert (
-                        measured_species.data_type != DataTypes.CONCENTRATION
-                    ), """
+                    assert measured_species.data_type != DataTypes.CONCENTRATION, """
                         The data seems to be already in concentration values.
                     """
                     # assert units are the same
-                    assert (
-                        measured_species.data_unit.name == self.conc_unit.name
-                    ), f"""
+                    assert measured_species.data_unit.name == self.conc_unit.name, f"""
                     The unit of the measured data ({measured_species.data_unit.name}) is not 
                     the same as the unit of the calibration model ({self.conc_unit.name}).
                     """
@@ -287,14 +282,11 @@ class Calibrator(BaseModel):
         if not silent:
             print(f"{symbol} Applied calibration to {converted_count} measurements")
 
-    def export_to_animl(
-        self, wavelength_nm: float = 420, silent: bool = False
-    ) -> "AnIML":
+    def export_to_animl(self, silent: bool = False) -> Any:
         """Exports measurements and models to an AnIML document.
 
         Args:
-            wavelength_nm (float, optional): The wavelength of the measurement in nm.
-                Defaults to 420 nm.
+            wavelength_nm (float): The wavelength of the measurement in nm.
 
         Raises:
             AssertionError: If no standard object is found.
@@ -303,17 +295,18 @@ class Calibrator(BaseModel):
         Returns:
             animl_document: The AnIML document.
         """
+        from calipytion.ioutils.animlio import get_animl_document, map_standard_to_animl
 
         assert self.standard, "No standard object found."
         assert self.standard.result, "No model found in the standard object."
 
-        self.standard.wavelength = wavelength_nm
+        self.standard.wavelength = self.wavelength
 
         animl_document = get_animl_document()
         animl_document = map_standard_to_animl(self.standard, animl_document)
 
         if not silent:
-            print(f"✅ Applied data to AnIML document")
+            print("✅ Applied data to AnIML document")
 
         return animl_document
 
@@ -326,6 +319,55 @@ class Calibrator(BaseModel):
         ), "The molecule id of the Calibrator and the Standard object must be the same."
 
         self.standard.result = model
+
+    @classmethod
+    def from_csv(
+        cls,
+        path: str,
+        molecule_id: str,
+        conc_unit: UnitDefinition,
+        pubchem_cid: int,
+        concentration_column_name: str,
+        molecule_name: str | None = None,
+        cutoff: Optional[float] = None,
+        wavelength: Optional[float] = None,
+    ):
+        """Reads the data from a CSV file and initializes the Calibrator object.
+
+        Args:
+            path (str): Path to the CSV file.
+            molecule_id (str): Unique identifier of the molecule.
+            conc_unit (UnitDefinition): Concentration unit.
+            pubchem_cid (int): PubChem Compound Identifier.
+            concentration_column_name (str): Name of the column containing the concentrations.
+            molecule_name (str, optional): Name of the molecule. Defaults to None.
+            cutoff (float, optional): Cutoff value for the signals If a signal is above this value, it
+                will be not considered for the calibration. Defaults to None.
+            wavelength (float, optional): Wavelength of the measurement. Defaults to None.
+
+        Returns:
+            Calibrator: The Calibrator object.
+        """
+
+        df = pd.read_csv(path)
+
+        conc_values = df[concentration_column_name].values
+        all_other_columns = df.columns.drop(concentration_column_name)
+        signals_matrix = df[all_other_columns].values
+        signals = signals_matrix.flatten()
+
+        concentrations = np.repeat(conc_values, signals_matrix.shape[1])
+
+        return cls(
+            molecule_id=molecule_id,
+            conc_unit=conc_unit,
+            pubchem_cid=pubchem_cid,
+            concentrations=concentrations.tolist(),
+            signals=signals.tolist(),
+            molecule_name=molecule_name,
+            cutoff=cutoff,
+            wavelength=wavelength,
+        )
 
     @classmethod
     def from_excel(
@@ -809,8 +851,6 @@ class Calibrator(BaseModel):
         if not model.was_fitted:
             raise ValueError("Model has not been fitted yet. Run 'fit_models' first.")
 
-        print(f"the wavelength is {self.wavelength}")
-
         standard = Standard(
             molecule_id=self.molecule_id,
             pubchem_cid=self.pubchem_cid,
@@ -860,14 +900,125 @@ class Calibrator(BaseModel):
             self.concentrations = [self.concentrations[idx] for idx in below_cutoff_idx]
             self.signals = [self.signals[idx] for idx in below_cutoff_idx]
 
+    def visualize_static(self, show: bool = True) -> None:
+        """Creates a static visualization of the calibration curve and residuals using matplotlib.
 
-def show_warning(message, category, filename, lineno, file=None, line=None):
-    print(f"Warning details:")
-    print(f"Message: {message}")
-    print(f"Category: {category}")
-    print(f"File: {filename}")
-    print(f"Line: {lineno}")
-    print(f"Line content: {line}")
+        Args:
+            show (bool): Whether to display the plot. Set to False when using in notebooks.
+                        Defaults to True.
+        """
+        assert any(
+            [model.was_fitted for model in self.models]
+        ), "No model has been fitted yet. Run 'fit_models' first."
+
+        import matplotlib.pyplot as plt
+
+        # Create figure with two subplots
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+
+        # Plot measured data points
+        ax1.scatter(
+            self.concentrations, self.signals, color="black", label="Measurements"
+        )
+
+        # Plot fitted models
+        for model in self.models:
+            fitter = Fitter.from_calibration_model(model)
+            assert model.calibration_range, "Calibration range not set."
+
+            # Generate smooth x data for model line
+            smooth_x = np.linspace(
+                model.calibration_range.conc_lower,
+                model.calibration_range.conc_upper,
+                100,
+            )
+
+            # Calculate model predictions
+            params = {param.symbol: param.value for param in model.parameters}
+            params[model.molecule_id] = smooth_x
+            model_pred = fitter.lmfit_model.eval(**params)
+
+            # Plot model line
+            ax1.plot(
+                smooth_x,
+                model_pred,
+                label=f"{model.name} (R² = {model.statistics.r2:.3f})",
+            )
+
+            # Calculate and plot residuals
+            fitter.fit(self.signals, self.concentrations, model.molecule_id)
+            residuals = fitter.lmfit_result.residual
+            ax2.scatter(self.concentrations, residuals, label=model.name)
+
+        # Add zero line to residuals plot
+        ax2.axhline(y=0, color="grey", linestyle="--", alpha=0.5)
+
+        # Set titles and labels
+        if self.wavelength:
+            signal_label = f"Signal (E{self.wavelength:.0f} nm)"
+        else:
+            signal_label = "Signal (a.u.)"
+
+        ax1.set_xlabel(f"{self.molecule_name} ({self.conc_unit.name})")
+        ax1.set_ylabel(signal_label)
+        ax1.set_title("Calibration Curve")
+        ax1.legend()
+
+        ax2.set_xlabel(f"{self.molecule_name} ({self.conc_unit.name})")
+        ax2.set_ylabel(f"Residuals {signal_label}")
+        ax2.set_title("Residuals")
+        ax2.legend()
+
+        # Adjust layout
+        plt.tight_layout()
+
+        if show:
+            plt.show()
+
+        return fig
 
 
-warnings.showwarning = show_warning
+if __name__ == "__main__":
+    from calipytion.units import uM
+
+    # initialize the calibrator
+    calibrator = Calibrator.from_csv(
+        path="/Users/max/Documents/GitHub/Range-2024/data/abts-calibration.csv",
+        molecule_id="s0",
+        molecule_name="ABTS",
+        pubchem_cid=5360881,
+        cutoff=3.2,
+        wavelength=340,
+        conc_unit=uM,
+        concentration_column_name="ABTS (µmol/l)",
+    )
+
+    # define the models to be fitted as potential signal laws
+    calibrator.models = []
+
+    linear = calibrator.add_model(
+        name="linear",
+        signal_law="a * s0 + b",
+    )
+    quadratic = calibrator.add_model(
+        name="quadratic",
+        signal_law="a * s0**2 + b * s0 + c",
+    )
+    cubic = calibrator.add_model(
+        name="cubic",
+        signal_law="a * s0**3 + b * s0**2 + c * s0 + d",
+    )
+
+    # fit the models
+    calibrator.fit_models()
+    # calibrator.visualize()
+    # calibrator.visualize_static()
+
+    calibrator.create_standard(
+        linear,
+        ph=7.4,
+        temperature=25,
+        temp_unit=C,
+    )
+    animl = calibrator.export_to_animl()
+    print(animl)
