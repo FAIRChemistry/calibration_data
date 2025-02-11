@@ -282,7 +282,7 @@ class Calibrator(BaseModel):
         if not silent:
             print(f"{symbol} Applied calibration to {converted_count} measurements")
 
-    def export_to_animl(self, silent: bool = False) -> Any:
+    def to_animl(self, silent: bool = False) -> Any:
         """Exports measurements and models to an AnIML document.
 
         Args:
@@ -306,7 +306,7 @@ class Calibrator(BaseModel):
         animl_document = map_standard_to_animl(self.standard, animl_document)
 
         if not silent:
-            print("✅ Applied data to AnIML document")
+            print("✅ Created AnIML document")
 
         return animl_document
 
@@ -527,6 +527,7 @@ class Calibrator(BaseModel):
             models=models,
             cutoff=cutoff,
             standard=standard,
+            wavelength=standard.wavelength,
         )
 
     def fit_models(self, silent: bool = False):
@@ -1020,5 +1021,4 @@ if __name__ == "__main__":
         temperature=25,
         temp_unit=C,
     )
-    animl = calibrator.export_to_animl()
-    print(animl)
+    animl = calibrator.to_animl()
