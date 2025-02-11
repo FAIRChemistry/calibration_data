@@ -368,22 +368,7 @@
               <F>1.0</F>
             </Parameter>
             <Parameter name="Standard error" parameterType="float">
-              <F>0.07286944288841404</F>
-            </Parameter>
-            <Parameter name="Lower bound" parameterType="float">
-              <F>-100000000.0</F>
-            </Parameter>
-            <Parameter name="Upper bound" parameterType="float">
-              <F>100000000.0</F>
-            </Parameter>
-            <Parameter name="d" parameterType="float">
-              <F>0.020242556929588318</F>
-            </Parameter>
-            <Parameter name="Initial value" parameterType="float">
-              <F>1.0</F>
-            </Parameter>
-            <Parameter name="Standard error" parameterType="float">
-              <F>0.02654451691749067</F>
+              <F>0.07286944288841417</F>
             </Parameter>
             <Parameter name="Lower bound" parameterType="float">
               <F>-100000000.0</F>
@@ -398,7 +383,22 @@
               <F>1.0</F>
             </Parameter>
             <Parameter name="Standard error" parameterType="float">
-              <F>0.009588191936673271</F>
+              <F>0.009588191936673311</F>
+            </Parameter>
+            <Parameter name="Lower bound" parameterType="float">
+              <F>-100000000.0</F>
+            </Parameter>
+            <Parameter name="Upper bound" parameterType="float">
+              <F>100000000.0</F>
+            </Parameter>
+            <Parameter name="d" parameterType="float">
+              <F>0.020242556929588318</F>
+            </Parameter>
+            <Parameter name="Initial value" parameterType="float">
+              <F>1.0</F>
+            </Parameter>
+            <Parameter name="Standard error" parameterType="float">
+              <F>0.026544516917490768</F>
             </Parameter>
             <Parameter name="Lower bound" parameterType="float">
               <F>-100000000.0</F>
@@ -413,7 +413,7 @@
               <F>1.0</F>
             </Parameter>
             <Parameter name="Standard error" parameterType="float">
-              <F>0.04919958508978285</F>
+              <F>0.04919958508978309</F>
             </Parameter>
             <Parameter name="Lower bound" parameterType="float">
               <F>-100000000.0</F>
