@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<AnIML version="0.9">
+  <SampleSet>
+    <Sample name="Test Sample" sampleID="sample0000">
+      <Category name="Description">
+        <Parameter name="Descriptive Name" parameterType="string">
+          <S>s0</S>
+        </Parameter>
+        <Parameter name="Temperature" parameterType="float">
+          <F>25.0</F>
+          <Unit label="Celsius"/>
+        </Parameter>
+        <Parameter name="pH" parameterType="float">
+          <F>7.4</F>
+          <Unit label="quantity of dimension one"/>
+        </Parameter>
+      </Category>
+    </Sample>
+  </SampleSet>
+  <ExperimentStepSet>
+    <ExperimentStep name="Standard of c = 0.0 mmol / l measured at 420.0 nm" experimentStepID="step0000">
+      <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
+      <Infrastructure>
+        <SampleReferenceSet>
+          <SampleReference sampleID="sample0000" role="measured" samplePurpose="consumed"/>
+        </SampleReferenceSet>
+      </Infrastructure>
+      <Method name="Common Method">
+        <Category name="Instrument Settings">
+          <Parameter name="Measurment Type" parameterType="string">
+            <S>Single</S>
+          </Parameter>
+        </Category>
+      </Method>
+      <Result name="Spectrum">
+        <SeriesSet name="Spectrum" length="1">
+          <Series name="Concentration" dependency="independent" seriesID="series0000" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>0.0</I>
+            </value_set>
+            <Unit label="mmol / l"/>
+          </Series>
+          <Series name="Wavelength" dependency="independent" seriesID="series0001" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>420.0</I>
+            </value_set>
+            <Unit label="nm"/>
+          </Series>
+          <Series name="Intensity" dependency="dependent" seriesID="series0002" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>0.02</I>
+            </value_set>
+            <Unit label="AU" quantity="intensity"/>
+          </Series>
+        </SeriesSet>
+        <Category name="Measurement Description">
+          <Parameter name="Experiment Duration" parameterType="integer">
+            <I>0</I>
+          </Parameter>
+        </Category>
+      </Result>
+    </ExperimentStep>
+    <ExperimentStep name="Standard of c = 0.5 mmol / l measured at 420.0 nm" experimentStepID="step0001">
+      <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
+      <Infrastructure>
+        <SampleReferenceSet>
+          <SampleReference sampleID="sample0000" role="measured" samplePurpose="consumed"/>
+        </SampleReferenceSet>
+      </Infrastructure>
+      <Method name="Common Method">
+        <Category name="Instrument Settings">
+          <Parameter name="Measurment Type" parameterType="string">
+            <S>Single</S>
+          </Parameter>
+        </Category>
+      </Method>
+      <Result name="Spectrum">
+        <SeriesSet name="Spectrum" length="1">
+          <Series name="Concentration" dependency="independent" seriesID="series0003" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>0.5</I>
+            </value_set>
+            <Unit label="mmol / l"/>
+          </Series>
+          <Series name="Wavelength" dependency="independent" seriesID="series0004" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>420.0</I>
+            </value_set>
+            <Unit label="nm"/>
+          </Series>
+          <Series name="Intensity" dependency="dependent" seriesID="series0005" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>0.509</I>
+            </value_set>
+            <Unit label="AU" quantity="intensity"/>
+          </Series>
+        </SeriesSet>
+        <Category name="Measurement Description">
+          <Parameter name="Experiment Duration" parameterType="integer">
+            <I>0</I>
+          </Parameter>
+        </Category>
+      </Result>
+    </ExperimentStep>
+    <ExperimentStep name="Standard of c = 1.0 mmol / l measured at 420.0 nm" experimentStepID="step0002">
+      <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
+      <Infrastructure>
+        <SampleReferenceSet>
+          <SampleReference sampleID="sample0000" role="measured" samplePurpose="consumed"/>
+        </SampleReferenceSet>
+      </Infrastructure>
+      <Method name="Common Method">
+        <Category name="Instrument Settings">
+          <Parameter name="Measurment Type" parameterType="string">
+            <S>Single</S>
+          </Parameter>
+        </Category>
+      </Method>
+      <Result name="Spectrum">
+        <SeriesSet name="Spectrum" length="1">
+          <Series name="Concentration" dependency="independent" seriesID="series0006" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>1.0</I>
+            </value_set>
+            <Unit label="mmol / l"/>
+          </Series>
+          <Series name="Wavelength" dependency="independent" seriesID="series0007" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>420.0</I>
+            </value_set>
+            <Unit label="nm"/>
+          </Series>
+          <Series name="Intensity" dependency="dependent" seriesID="series0008" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>1.076</I>
+            </value_set>
+            <Unit label="AU" quantity="intensity"/>
+          </Series>
+        </SeriesSet>
+        <Category name="Measurement Description">
+          <Parameter name="Experiment Duration" parameterType="integer">
+            <I>0</I>
+          </Parameter>
+        </Category>
+      </Result>
+    </ExperimentStep>
+    <ExperimentStep name="Standard of c = 1.5 mmol / l measured at 420.0 nm" experimentStepID="step0003">
+      <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
+      <Infrastructure>
+        <SampleReferenceSet>
+          <SampleReference sampleID="sample0000" role="measured" samplePurpose="consumed"/>
+        </SampleReferenceSet>
+      </Infrastructure>
+      <Method name="Common Method">
+        <Category name="Instrument Settings">
+          <Parameter name="Measurment Type" parameterType="string">
+            <S>Single</S>
+          </Parameter>
+        </Category>
+      </Method>
+      <Result name="Spectrum">
+        <SeriesSet name="Spectrum" length="1">
+          <Series name="Concentration" dependency="independent" seriesID="series0009" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>1.5</I>
+            </value_set>
+            <Unit label="mmol / l"/>
+          </Series>
+          <Series name="Wavelength" dependency="independent" seriesID="series0010" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>420.0</I>
+            </value_set>
+            <Unit label="nm"/>
+          </Series>
+          <Series name="Intensity" dependency="dependent" seriesID="series0011" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>1.534</I>
+            </value_set>
+            <Unit label="AU" quantity="intensity"/>
+          </Series>
+        </SeriesSet>
+        <Category name="Measurement Description">
+          <Parameter name="Experiment Duration" parameterType="integer">
+            <I>0</I>
+          </Parameter>
+        </Category>
+      </Result>
+    </ExperimentStep>
+    <ExperimentStep name="Standard of c = 2.0 mmol / l measured at 420.0 nm" experimentStepID="step0004">
+      <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
+      <Infrastructure>
+        <SampleReferenceSet>
+          <SampleReference sampleID="sample0000" role="measured" samplePurpose="consumed"/>
+        </SampleReferenceSet>
+      </Infrastructure>
+      <Method name="Common Method">
+        <Category name="Instrument Settings">
+          <Parameter name="Measurment Type" parameterType="string">
+            <S>Single</S>
+          </Parameter>
+        </Category>
+      </Method>
+      <Result name="Spectrum">
+        <SeriesSet name="Spectrum" length="1">
+          <Series name="Concentration" dependency="independent" seriesID="series0012" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>2.0</I>
+            </value_set>
+            <Unit label="mmol / l"/>
+          </Series>
+          <Series name="Wavelength" dependency="independent" seriesID="series0013" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>420.0</I>
+            </value_set>
+            <Unit label="nm"/>
+          </Series>
+          <Series name="Intensity" dependency="dependent" seriesID="series0014" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>2.008</I>
+            </value_set>
+            <Unit label="AU" quantity="intensity"/>
+          </Series>
+        </SeriesSet>
+        <Category name="Measurement Description">
+          <Parameter name="Experiment Duration" parameterType="integer">
+            <I>0</I>
+          </Parameter>
+        </Category>
+      </Result>
+    </ExperimentStep>
+    <ExperimentStep name="Standard of c = 2.5 mmol / l measured at 420.0 nm" experimentStepID="step0005">
+      <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
+      <Infrastructure>
+        <SampleReferenceSet>
+          <SampleReference sampleID="sample0000" role="measured" samplePurpose="consumed"/>
+        </SampleReferenceSet>
+      </Infrastructure>
+      <Method name="Common Method">
+        <Category name="Instrument Settings">
+          <Parameter name="Measurment Type" parameterType="string">
+            <S>Single</S>
+          </Parameter>
+        </Category>
+      </Method>
+      <Result name="Spectrum">
+        <SeriesSet name="Spectrum" length="1">
+          <Series name="Concentration" dependency="independent" seriesID="series0015" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>2.5</I>
+            </value_set>
+            <Unit label="mmol / l"/>
+          </Series>
+          <Series name="Wavelength" dependency="independent" seriesID="series0016" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>420.0</I>
+            </value_set>
+            <Unit label="nm"/>
+          </Series>
+          <Series name="Intensity" dependency="dependent" seriesID="series0017" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>2.482</I>
+            </value_set>
+            <Unit label="AU" quantity="intensity"/>
+          </Series>
+        </SeriesSet>
+        <Category name="Measurement Description">
+          <Parameter name="Experiment Duration" parameterType="integer">
+            <I>0</I>
+          </Parameter>
+        </Category>
+      </Result>
+    </ExperimentStep>
+    <ExperimentStep name="Standard of c = 3.0 mmol / l measured at 420.0 nm" experimentStepID="step0006">
+      <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
+      <Infrastructure>
+        <SampleReferenceSet>
+          <SampleReference sampleID="sample0000" role="measured" samplePurpose="consumed"/>
+        </SampleReferenceSet>
+      </Infrastructure>
+      <Method name="Common Method">
+        <Category name="Instrument Settings">
+          <Parameter name="Measurment Type" parameterType="string">
+            <S>Single</S>
+          </Parameter>
+        </Category>
+      </Method>
+      <Result name="Spectrum">
+        <SeriesSet name="Spectrum" length="1">
+          <Series name="Concentration" dependency="independent" seriesID="series0018" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>3.0</I>
+            </value_set>
+            <Unit label="mmol / l"/>
+          </Series>
+          <Series name="Wavelength" dependency="independent" seriesID="series0019" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>420.0</I>
+            </value_set>
+            <Unit label="nm"/>
+          </Series>
+          <Series name="Intensity" dependency="dependent" seriesID="series0020" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>2.898</I>
+            </value_set>
+            <Unit label="AU" quantity="intensity"/>
+          </Series>
+        </SeriesSet>
+        <Category name="Measurement Description">
+          <Parameter name="Experiment Duration" parameterType="integer">
+            <I>0</I>
+          </Parameter>
+        </Category>
+      </Result>
+    </ExperimentStep>
+    <ExperimentStep name="Standard of c = 3.5 mmol / l measured at 420.0 nm" experimentStepID="step0007">
+      <Technique name="UV/Vis" uri="https://github.com/AnIML/techniques/blob/master/uv-vis.atdd"/>
+      <Infrastructure>
+        <SampleReferenceSet>
+          <SampleReference sampleID="sample0000" role="measured" samplePurpose="consumed"/>
+        </SampleReferenceSet>
+      </Infrastructure>
+      <Method name="Common Method">
+        <Category name="Instrument Settings">
+          <Parameter name="Measurment Type" parameterType="string">
+            <S>Single</S>
+          </Parameter>
+        </Category>
+      </Method>
+      <Result name="Spectrum">
+        <SeriesSet name="Spectrum" length="1">
+          <Series name="Concentration" dependency="independent" seriesID="series0021" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>3.5</I>
+            </value_set>
+            <Unit label="mmol / l"/>
+          </Series>
+          <Series name="Wavelength" dependency="independent" seriesID="series0022" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>420.0</I>
+            </value_set>
+            <Unit label="nm"/>
+          </Series>
+          <Series name="Intensity" dependency="dependent" seriesID="series0023" seriesType="float" plotScale="linear">
+            <value_set>
+              <I>3.176</I>
+            </value_set>
+            <Unit label="AU" quantity="intensity"/>
+          </Series>
+        </SeriesSet>
+        <Category name="Measurement Description">
+          <Parameter name="Experiment Duration" parameterType="integer">
+            <I>0</I>
+          </Parameter>
+        </Category>
+      </Result>
+    </ExperimentStep>
+    <ExperimentStep name="Calibration Model" experimentStepID="step0008">
+      <Result name="Calibration Model">
+        <Category name="cubic">
+          <Parameter name="Model Equation" parameterType="string">
+            <S>a * s0 ** 3 + b * s0 ** 2 + c * s0 + d</S>
+          </Parameter>
+          <Category name="Model Parameters">
+            <Parameter name="c" parameterType="float">
+              <F>0.9840634912252426</F>
+            </Parameter>
+            <Parameter name="Initial value" parameterType="float">
+              <F>1.0</F>
+            </Parameter>
+            <Parameter name="Standard error" parameterType="float">
+              <F>0.07286944288841417</F>
+            </Parameter>
+            <Parameter name="Lower bound" parameterType="float">
+              <F>-100000000.0</F>
+            </Parameter>
+            <Parameter name="Upper bound" parameterType="float">
+              <F>100000000.0</F>
+            </Parameter>
+            <Parameter name="a" parameterType="float">
+              <F>-0.02256566286087036</F>
+            </Parameter>
+            <Parameter name="Initial value" parameterType="float">
+              <F>1.0</F>
+            </Parameter>
+            <Parameter name="Standard error" parameterType="float">
+              <F>0.009588191936673311</F>
+            </Parameter>
+            <Parameter name="Lower bound" parameterType="float">
+              <F>-100000000.0</F>
+            </Parameter>
+            <Parameter name="Upper bound" parameterType="float">
+              <F>100000000.0</F>
+            </Parameter>
+            <Parameter name="d" parameterType="float">
+              <F>0.020242556929588318</F>
+            </Parameter>
+            <Parameter name="Initial value" parameterType="float">
+              <F>1.0</F>
+            </Parameter>
+            <Parameter name="Standard error" parameterType="float">
+              <F>0.026544516917490768</F>
+            </Parameter>
+            <Parameter name="Lower bound" parameterType="float">
+              <F>-100000000.0</F>
+            </Parameter>
+            <Parameter name="Upper bound" parameterType="float">
+              <F>100000000.0</F>
+            </Parameter>
+            <Parameter name="b" parameterType="float">
+              <F>0.05644586682319641</F>
+            </Parameter>
+            <Parameter name="Initial value" parameterType="float">
+              <F>1.0</F>
+            </Parameter>
+            <Parameter name="Standard error" parameterType="float">
+              <F>0.04919958508978309</F>
+            </Parameter>
+            <Parameter name="Lower bound" parameterType="float">
+              <F>-100000000.0</F>
+            </Parameter>
+            <Parameter name="Upper bound" parameterType="float">
+              <F>100000000.0</F>
+            </Parameter>
+          </Category>
+          <Category name="Calibration Range">
+            <Parameter name="Concentration lower bound" parameterType="float">
+              <F>0.0</F>
+            </Parameter>
+            <Parameter name="Concentration upper bound" parameterType="float">
+              <F>3.5</F>
+            </Parameter>
+            <Parameter name="Intensity lower bound" parameterType="float">
+              <F>0.02</F>
+            </Parameter>
+            <Parameter name="Intensity upper bound" parameterType="float">
+              <F>3.176</F>
+            </Parameter>
+          </Category>
+          <Category name="Fit statistics">
+            <Parameter name="Akaike information criterion (aic)" parameterType="float">
+              <F>-54.229174761344325</F>
+            </Parameter>
+            <Parameter name="Bayesian information criterion (bic)" parameterType="float">
+              <F>-53.91140859462498</F>
+            </Parameter>
+            <Parameter name="Coefficient of determination (r^2)" parameterType="float">
+              <F>0.9996269628733623</F>
+            </Parameter>
+            <Parameter name="Root mean square deviation (RMSD)" parameterType="float">
+              <F>0.020459183577884475</F>
+            </Parameter>
+          </Category>
+        </Category>
+      </Result>
+    </ExperimentStep>
+  </ExperimentStepSet>
+</AnIML>

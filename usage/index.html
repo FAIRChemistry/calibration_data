@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://fairchemistry.github.io/CaliPytion/usage/" rel="canonical"/>
+<link href=".." rel="prev"/>
+<link href="../data_model/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.3" name="generator"/>
+<title>Usage - CaliPytion</title>
+<link href="../assets/stylesheets/main.d7758b05.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#usage">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="CaliPytion" class="md-header__button md-logo" data-md-component="logo" href=".." title="CaliPytion">
+<img alt="logo" src="../figs/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            CaliPytion
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Usage
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/FAIRChemistry/CaliPytion/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    FAIRChemistry/CaliPytion
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
+        
+  
+    
+  
+  Usage
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../data_model/">
+        
+  
+    
+  
+  Standard Data Model
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="CaliPytion" class="md-nav__button md-logo" data-md-component="logo" href=".." title="CaliPytion">
+<img alt="logo" src="../figs/logo.png"/>
+</a>
+    CaliPytion
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/FAIRChemistry/CaliPytion/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    FAIRChemistry/CaliPytion
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Usage
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Usage
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-calibrator">
+<span class="md-ellipsis">
+      The Calibrator
+    </span>
+</a>
+<nav aria-label="The Calibrator" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initialization">
+<span class="md-ellipsis">
+      Initialization
+    </span>
+</a>
+<nav aria-label="Initialization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#from-xlsx-file">
+<span class="md-ellipsis">
+      From .xlsx file
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#from-json-standard">
+<span class="md-ellipsis">
+      From .json standard
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-calibration-models">
+<span class="md-ellipsis">
+      Adding calibration models
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fitting-calibration-models">
+<span class="md-ellipsis">
+      Fitting calibration models
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#visualizing-calibration-models">
+<span class="md-ellipsis">
+      Visualizing calibration models
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#concentration-calculation">
+<span class="md-ellipsis">
+      Concentration calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#serialization">
+<span class="md-ellipsis">
+      Serialization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#applying-a-calibrator-to-an-enzymeml-document">
+<span class="md-ellipsis">
+      Applying a calibrator to an EnzymeML Document
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data_model/">
+<span class="md-ellipsis">
+    Standard Data Model
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h1>
+<p><a href="https://colab.research.google.com/github/FAIRChemistry/CaliPytion/blob/dev/docs/usage.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a></p>
+<h2 id="the-calibrator">The <code>Calibrator</code><a class="headerlink" href="#the-calibrator" title="Permanent link">¶</a></h2>
+<p>The <code>Calibrator</code> class is the main entry point to create and use calibration models for concentration calculation. It harbors all functionalities to load data, add calibration models, fit calibration models, calculate concentrations, and serialize serialization.<br/>
+The <code>Calibrator</code> contains a <code>Standard</code>, which harbors the data structure structuring all aspects of a fitted calibration model, measured standards, and measurement conditions.</p>
+<h3 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">¶</a></h3>
+<p>The <code>Calibrator</code> can be initialized by providing the <code>concentrations</code> and respective measured <code>signals</code> as lists. Additionally, the <code>molecule_id</code> and <code>pubchem_cid</code> and the respective <code>conc_unit</code> need to be provided. The <code>molecule_id</code> serves as an internal id to reference the molecule in equations (E.g. 's1'). The <code>pubchem_cid</code> serves as a global identifier, to uniquely reference a molecule in the PubChem database. Optionally, a <code>molecule_name</code> and a <code>wavelength</code> can be provided if the signal data originates from a spectrophotometric measurement. Setting the <code>cutoff</code> can be provided to exclude signals above a certain value.
+Units are handled as predefined objects which can be imported from the <code>calipytion.units</code> module.  </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">calipytion</span><span class="w"> </span><span class="kn">import</span> <span class="n">Calibrator</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">calipytion.units</span><span class="w"> </span><span class="kn">import</span> <span class="n">mM</span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">calibrator</span> <span class="o">=</span> <span class="n">Calibrator</span><span class="p">(</span>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="n">molecule_id</span><span class="o">=</span><span class="s2">"s0"</span><span class="p">,</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="n">pubchem_cid</span><span class="o">=</span><span class="mi">439153</span><span class="p">,</span>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="n">molecule_name</span><span class="o">=</span><span class="s2">"NADH"</span><span class="p">,</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="n">conc_unit</span><span class="o">=</span><span class="n">mM</span><span class="p">,</span>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="n">concentrations</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">],</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="n">signals</span><span class="o">=</span><span class="p">[</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.509</span><span class="p">,</span> <span class="mf">1.076</span><span class="p">,</span> <span class="mf">1.534</span><span class="p">,</span> <span class="mf">2.008</span><span class="p">,</span> <span class="mf">2.482</span><span class="p">,</span> <span class="mf">2.898</span><span class="p">,</span> <span class="mf">3.176</span><span class="p">],</span>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="n">wavelength</span><span class="o">=</span><span class="mi">420</span><span class="p">,</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">)</span>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">)</span>
+</span></code></pre></div>
+<h4 id="from-xlsx-file">From <code>.xlsx</code> file<a class="headerlink" href="#from-xlsx-file" title="Permanent link">¶</a></h4>
+<p>Alternatively, the calibrator can be initialized by loading the data from a sheet of an Excel file, using the <code>from_excel</code> method. By default, the first sheet is loaded. Otherwise, the <code>sheet_name</code> can be provided, to specify the sheet to be loaded. Alongside the <code>path</code> of the file, the <code>molecule_id</code>, <code>molecule_name</code>, and <code>conc_unit</code> need to be provided. Optionally, the <code>wavelength</code> can be provided. Furthermore, using <code>skip_rows</code> the number of rows to be skipped can be specified. By default, the first row is skipped, as it is assumed to contain the column names. </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">calipytion</span><span class="w"> </span><span class="kn">import</span> <span class="n">Calibrator</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">calipytion.units</span><span class="w"> </span><span class="kn">import</span> <span class="n">mM</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">calibrator</span> <span class="o">=</span> <span class="n">Calibrator</span><span class="o">.</span><span class="n">from_excel</span><span class="p">(</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="n">path</span><span class="o">=</span><span class="s2">"data.xlsx"</span><span class="p">,</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="n">molecule_id</span><span class="o">=</span><span class="s2">"s0"</span><span class="p">,</span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="n">molecule_name</span><span class="o">=</span><span class="s2">"NADH"</span><span class="p">,</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="n">conc_unit</span><span class="o">=</span><span class="n">mM</span><span class="p">,</span>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="n">wavelength</span><span class="o">=</span><span class="mi">420</span><span class="p">,</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>    <span class="n">skip_rows</span><span class="o">=</span><span class="mi">1</span>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="p">)</span>
+</span></code></pre></div>
+<h4 id="from-json-standard">From <code>.json</code> standard<a class="headerlink" href="#from-json-standard" title="Permanent link">¶</a></h4>
+<p>Natively the <code>Calibrator</code> alongside a fitted calibration model is serialized as a <code>Standard</code> JSON file. This file can be read to reuse a calibrator, using the <code>from_json</code> method. </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">calibrator</span> <span class="o">=</span> <span class="n">Calibrator</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="s2">"data/abts_standard.json"</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="adding-calibration-models">Adding calibration models<a class="headerlink" href="#adding-calibration-models" title="Permanent link">¶</a></h3>
+<p>By default, the <code>Calibrator</code> is initialized with three polynomial calibration models, a linear, quadratic, and cubic model. These models do not include a parameter for the intercept. Thus blanked signals are assumed to be zero.<br/>
+Additional models can be added by using the <code>add_model</code> method. The method requires a <code>name</code> and a <code>signal_law</code>, describing the mathematical relationship between the signal and the concentration. Only the right side of the equation needs to be provided. The left side is assumed to be the signal. Additionally, the variable of the concentration must match the <code>molecule_id</code> provided during initialization.
+Furthermore, an <code>initial_value</code>, the <code>lower_bound</code>, and the <code>upper_bound</code> can be provided for all parameters. </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># delete default models</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">calibrator</span><span class="o">.</span><span class="n">models</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># add a linear, quadratic, cubic, and rational model with intercept</span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">linear</span> <span class="o">=</span> <span class="n">calibrator</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">"linear"</span><span class="p">,</span>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="n">signal_law</span><span class="o">=</span><span class="s2">"a * s0 + b"</span><span class="p">,</span>
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>    <span class="n">upper_bound</span><span class="o">=</span><span class="mf">1e8</span><span class="p">,</span>
+</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="n">lower_bound</span><span class="o">=-</span><span class="mf">1e8</span><span class="p">,</span>
+</span><span id="__span-3-10"><a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="p">)</span>
+</span><span id="__span-3-11"><a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">quadratic</span> <span class="o">=</span> <span class="n">calibrator</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span>
+</span><span id="__span-3-12"><a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">"quadratic"</span><span class="p">,</span>
+</span><span id="__span-3-13"><a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a>    <span class="n">signal_law</span><span class="o">=</span><span class="s2">"a * s0 ** 2 + b * s0 + c"</span><span class="p">,</span>
+</span><span id="__span-3-14"><a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>    <span class="n">upper_bound</span><span class="o">=</span><span class="mf">1e8</span><span class="p">,</span>
+</span><span id="__span-3-15"><a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a>    <span class="n">lower_bound</span><span class="o">=-</span><span class="mf">1e8</span><span class="p">,</span>
+</span><span id="__span-3-16"><a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="p">)</span>
+</span><span id="__span-3-17"><a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="n">cubic</span> <span class="o">=</span> <span class="n">calibrator</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span>
+</span><span id="__span-3-18"><a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">"cubic"</span><span class="p">,</span>
+</span><span id="__span-3-19"><a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a>    <span class="n">signal_law</span><span class="o">=</span><span class="s2">"a * s0 ** 3 + b * s0 ** 2 + c * s0 + d"</span><span class="p">,</span>
+</span><span id="__span-3-20"><a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a>    <span class="n">upper_bound</span><span class="o">=</span><span class="mf">1e8</span><span class="p">,</span>
+</span><span id="__span-3-21"><a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a>    <span class="n">lower_bound</span><span class="o">=-</span><span class="mf">1e8</span><span class="p">,</span>
+</span><span id="__span-3-22"><a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="p">)</span>
+</span><span id="__span-3-23"><a href="#__codelineno-3-23" id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="n">rational</span> <span class="o">=</span> <span class="n">calibrator</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span>
+</span><span id="__span-3-24"><a href="#__codelineno-3-24" id="__codelineno-3-24" name="__codelineno-3-24"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">"rational"</span><span class="p">,</span>
+</span><span id="__span-3-25"><a href="#__codelineno-3-25" id="__codelineno-3-25" name="__codelineno-3-25"></a>    <span class="n">signal_law</span><span class="o">=</span><span class="s2">"a * s0 / (b + s0) + c"</span><span class="p">,</span>
+</span><span id="__span-3-26"><a href="#__codelineno-3-26" id="__codelineno-3-26" name="__codelineno-3-26"></a>    <span class="n">upper_bound</span><span class="o">=</span><span class="mf">1e8</span><span class="p">,</span>
+</span><span id="__span-3-27"><a href="#__codelineno-3-27" id="__codelineno-3-27" name="__codelineno-3-27"></a>    <span class="n">lower_bound</span><span class="o">=-</span><span class="mf">1e8</span><span class="p">,</span>
+</span><span id="__span-3-28"><a href="#__codelineno-3-28" id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="fitting-calibration-models">Fitting calibration models<a class="headerlink" href="#fitting-calibration-models" title="Permanent link">¶</a></h3>
+<p>After specifying the calibration models, the models can be fitted to the data using the <code>fit_models</code> method. This fits all models that were added to the calibrator. After fitting, a table with fit statistics such as Akaike Information Criterion (AIC), R<sup>2</sup>, and Root Mean Squared Deviation (RMSD) is printed alongside the equation and relative parameter standard errors of each model.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">calibrator</span><span class="o">.</span><span class="n">fit_models</span><span class="p">()</span>
+</span></code></pre></div>
+<h4 style="text-align:center;">Model Overview</h4>
+<table>
+<thead>
+<tr>
+<th>Model Name</th>
+<th>AIC</th>
+<th>R squared</th>
+<th>RMSD</th>
+<th>Equation</th>
+<th>Relative Parameter Standard Errors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cubic</td>
+<td>-54</td>
+<td>0.9996</td>
+<td>0.0205</td>
+<td>a * s0 ** 3 + b * s0 ** 2 + c * s0 + d</td>
+<td>d: 131.1%, c: 7.4%, a: 42.5%, b: 87.2%</td>
+</tr>
+<tr>
+<td>quadratic</td>
+<td>-49</td>
+<td>0.9991</td>
+<td>0.0318</td>
+<td>a * s0 ** 2 + b * s0 + c</td>
+<td>c: 378.3%, a: 20.3%, b: 4.0%</td>
+</tr>
+<tr>
+<td>rational</td>
+<td>-48</td>
+<td>0.9989</td>
+<td>0.0351</td>
+<td>a * s0 / (b + s0) + c</td>
+<td>a: 20.6%, c: 433.9%, b: 25.8%</td>
+</tr>
+<tr>
+<td>linear</td>
+<td>-37</td>
+<td>0.9946</td>
+<td>0.0778</td>
+<td>a * s0 + b</td>
+<td>a: 3.0%, b: 58.1%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="visualizing-calibration-models">Visualizing calibration models<a class="headerlink" href="#visualizing-calibration-models" title="Permanent link">¶</a></h3>
+<p>After fitting, the calibration models can be visualized using the <code>visualize</code> method. The method returns an interactive figure, allowing the user to inspect the calibration models and the residuals and to compare the models. </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">calibrator</span><span class="o">.</span><span class="n">visualize</span><span class="p">()</span>
+</span></code></pre></div>
+<div class="mkdocs-plotly">{"data":[{"customdata":["NADH standard"],"marker":{"color":"#000000"},"mode":"markers","name":"NADH","visible":true,"x":[0.0,0.5,1.0,1.5,2.0,2.5,3.0,3.5],"y":[0.02,0.509,1.076,1.534,2.008,2.482,2.898,3.176],"type":"scatter","xaxis":"x","yaxis":"y","hovertemplate":"Signal: %{y:.2f}"},{"customdata":["cubic model"],"marker":{"color":"#636EFA"},"mode":"lines","name":"cubic model","visible":false,"x":[0.0,0.03535353535353535,0.0707070707070707,0.10606060606060605,0.1414141414141414,0.17676767676767677,0.2121212121212121,0.24747474747474746,0.2828282828282828,0.3181818181818182,0.35353535353535354,0.3888888888888889,0.4242424242424242,0.45959595959595956,0.4949494949494949,0.5303030303030303,0.5656565656565656,0.601010101010101,0.6363636363636364,0.6717171717171717,0.7070707070707071,0.7424242424242424,0.7777777777777778,0.8131313131313131,0.8484848484848484,0.8838383838383838,0.9191919191919191,0.9545454545454545,0.9898989898989898,1.0252525252525253,1.0606060606060606,1.095959595959596,1.1313131313131313,1.1666666666666665,1.202020202020202,1.2373737373737372,1.2727272727272727,1.308080808080808,1.3434343434343434,1.3787878787878787,1.4141414141414141,1.4494949494949494,1.4848484848484849,1.52020202020202,1.5555555555555556,1.5909090909090908,1.6262626262626263,1.6616161616161615,1.6969696969696968,1.7323232323232323,1.7676767676767675,1.803030303030303,1.8383838383838382,1.8737373737373737,1.909090909090909,1.9444444444444444,1.9797979797979797,2.015151515151515,2.0505050505050506,2.0858585858585856,2.121212121212121,2.1565656565656566,2.191919191919192,2.227272727272727,2.2626262626262625,2.297979797979798,2.333333333333333,2.3686868686868685,2.404040404040404,2.4393939393939394,2.4747474747474745,2.51010101010101,2.5454545454545454,2.580808080808081,2.616161616161616,2.6515151515151514,2.686868686868687,2.7222222222222223,2.7575757575757573,2.792929292929293,2.8282828282828283,2.8636363636363633,2.898989898989899,2.9343434343434343,2.9696969696969697,3.0050505050505047,3.04040404040404,3.0757575757575757,3.111111111111111,3.146464646464646,3.1818181818181817,3.217171717171717,3.2525252525252526,3.2878787878787876,3.323232323232323,3.3585858585858586,3.3939393939393936,3.429292929292929,3.4646464646464645,3.5],"y":[0.020242556929588318,0.055102233373076126,0.09009702737641787,0.12522095623039609,0.16046803722579342,0.19583228765339236,0.23130772480397555,0.26688836596832555,0.30256822843722486,0.3383413295014562,0.374201686451802,0.41014331657904496,0.44616023717396747,0.4822464655273523,0.5183960189299819,0.554602914672639,0.5908611700461059,0.6271648023411656,0.6635078288486002,0.6998842668591925,0.7362881336637251,0.7727134465529806,0.8091542228177415,0.8456044797487904,0.8820582346369097,0.9185095047728822,0.9549523074474905,0.991380659951517,1.0277885795757444,1.0641700836109553,1.100519189347932,1.1368299140774576,1.173096275090314,1.2093122896772843,1.245471975129151,1.2815693487366964,1.3175984277907034,1.3535532295819543,1.3894277714012317,1.4252160705393186,1.460912144286997,1.49651000993505,1.5320036847742595,1.5673871860954087,1.6026545311892801,1.637799737346656,1.6728168218583193,1.7076998020150518,1.7424426951076368,1.777039518426857,1.8114842892634946,1.8457710249083323,1.8798937426521525,1.913846459785738,1.9476231935998713,1.981217961385335,2.0146247804329116,2.047837668033384,2.0808506414775345,2.1136577180561447,2.146252915059999,2.178630249779879,2.2107837395065677,2.242707401530846,2.274395253143499,2.3058413116353083,2.337039594297056,2.3679841184195243,2.3986689012934974,2.4290879602097566,2.4592353124590844,2.489104975332264,2.5186909661200776,2.5479873021133086,2.576988000602738,2.60568707887915,2.6340785542333256,2.662156443956049,2.6899147653381013,2.717347535670266,2.7444487722433255,2.771212492348062,2.7976327132752585,2.823703452315698,2.849418726760162,2.8747725538994335,2.8997589510242956,2.9243719354255306,2.9486055243939204,2.972453735220248,2.995910585195296,3.0189700916098476,3.041626271754685,3.063873142920589,3.0857047223983454,3.1071150274787347,3.12809807545254,3.1486478836105434,3.168758469243528,3.1884238496422768],"type":"scatter","xaxis":"x","yaxis":"y","hovertemplate":"Signal: %{y:.2f}"},{"customdata":["cubic model"],"hoverinfo":"skip","marker":{"color":"#636EFA"},"mode":"markers","name":"Residuals","visible":false,"x":[0.0,0.5,1.0,1.5,2.0,2.5,3.0,3.5],"y":[0.00024255692958831745,0.014565061390399925,-0.037813747882843085,0.013181881964206665,0.025627703785896294,-0.0014005295634271775,-0.026827065229416025,0.012423849642276608],"type":"scatter","xaxis":"x2","yaxis":"y2","hovertemplate":"Signal: %{y:.2f}"},{"customdata":["cubic model"],"line":{"color":"grey","dash":"dash","width":2},"showlegend":false,"visible":true,"x":[0.0,0.5,1.0,1.5,2.0,2.5,3.0,3.5],"y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"type":"scatter","xaxis":"x2","yaxis":"y2","hovertemplate":"Signal: %{y:.2f}"},{"customdata":["quadratic model"],"marker":{"color":"#EF553B"},"mode":"lines","name":"quadratic model","visible":false,"x":[0.0,0.03535353535353535,0.0707070707070707,0.10606060606060605,0.1414141414141414,0.17676767676767677,0.2121212121212121,0.24747474747474746,0.2828282828282828,0.3181818181818182,0.35353535353535354,0.3888888888888889,0.4242424242424242,0.45959595959595956,0.4949494949494949,0.5303030303030303,0.5656565656565656,0.601010101010101,0.6363636363636364,0.6717171717171717,0.7070707070707071,0.7424242424242424,0.7777777777777778,0.8131313131313131,0.8484848484848484,0.8838383838383838,0.9191919191919191,0.9545454545454545,0.9898989898989898,1.0252525252525253,1.0606060606060606,1.095959595959596,1.1313131313131313,1.1666666666666665,1.202020202020202,1.2373737373737372,1.2727272727272727,1.308080808080808,1.3434343434343434,1.3787878787878787,1.4141414141414141,1.4494949494949494,1.4848484848484849,1.52020202020202,1.5555555555555556,1.5909090909090908,1.6262626262626263,1.6616161616161615,1.6969696969696968,1.7323232323232323,1.7676767676767675,1.803030303030303,1.8383838383838382,1.8737373737373737,1.909090909090909,1.9444444444444444,1.9797979797979797,2.015151515151515,2.0505050505050506,2.0858585858585856,2.121212121212121,2.1565656565656566,2.191919191919192,2.227272727272727,2.2626262626262625,2.297979797979798,2.333333333333333,2.3686868686868685,2.404040404040404,2.4393939393939394,2.4747474747474745,2.51010101010101,2.5454545454545454,2.580808080808081,2.616161616161616,2.6515151515151514,2.686868686868687,2.7222222222222223,2.7575757575757573,2.792929292929293,2.8282828282828283,2.8636363636363633,2.898989898989899,2.9343434343434343,2.9696969696969697,3.0050505050505047,3.04040404040404,3.0757575757575757,3.111111111111111,3.146464646464646,3.1818181818181817,3.217171717171717,3.2525252525252526,3.2878787878787876,3.323232323232323,3.3585858585858586,3.3939393939393936,3.429292929292929,3.4646464646464645,3.5],"y":[-0.009375035762786865,0.030822273680943882,0.07086453939923071,0.11075176139207363,0.15048393965947263,0.19006107420142773,0.2294831650179389,0.2687502121090062,0.30786221547462955,0.346819175114809,0.3856210910295445,0.42426796321883614,0.4627597916826838,0.5010965764210876,0.5392783174340474,0.5773050147215635,0.6151766682836355,0.6528932781202637,0.6904548442314479,0.7278613666171881,0.7651128452774846,0.8022092802123371,0.8391506714217457,0.8759370189057103,0.9125683226642309,0.9490445826973078,0.9853657990049407,1.0215319715871298,1.057543100443875,1.0933991855751763,1.1291002269810333,1.1646462246614468,1.2000371786164161,1.2352730888459418,1.2703539553500234,1.3052797781286611,1.3400505571818548,1.3746662925096047,1.4091269841119107,1.4434326319887727,1.4775832361401908,1.5115787965661651,1.5454193132666956,1.579104786241782,1.6126352154914243,1.646010601015623,1.6792309428143777,1.7122962408876883,1.745206495235555,1.7779617058579782,1.810561872754957,1.843006995926492,1.8752970753725833,1.9074321110932306,1.939412103088434,1.9712370513581934,2.002906955902509,2.0344218167213803,2.0657816338148085,2.096986407182792,2.1280361368253318,2.1589308227424278,2.18967046493408,2.220255063400288,2.2506846181410523,2.280959129156373,2.311078596446249,2.3410430200106815,2.37085239984967,2.400506735963215,2.4300060283513156,2.4593502770139724,2.4885394819511855,2.5175736431629545,2.5464527606492795,2.575176834410161,2.6037458644455977,2.6321598507555914,2.660418793340141,2.6885226921992462,2.716471547332908,2.744265358741125,2.7719041264238995,2.7993878503812297,2.8267165306131155,2.853890167119557,2.8809087599005556,2.90777230895611,2.93448081428622,2.9610342758908863,2.987432693770109,3.0136760679238876,3.0397643983522222,3.0656976850551128,3.09147592803256,3.117099127284563,3.1425672828111217,3.1678803946122365,3.1930384626879085,3.2180414870381355],"type":"scatter","xaxis":"x","yaxis":"y","hovertemplate":"Signal: %{y:.2f}"},{"customdata":["quadratic model"],"hoverinfo":"skip","marker":{"color":"#EF553B"},"mode":"markers","name":"Residuals","visible":false,"x":[0.0,0.5,1.0,1.5,2.0,2.5,3.0,3.5],"y":[-0.029375035762786866,0.03572019523382186,-0.008196483016014167,0.0258749294877052,0.012934432744979851,-0.031017973244190422,-0.047982288479805124,0.04204148703813537],"type":"scatter","xaxis":"x2","yaxis":"y2","hovertemplate":"Signal: %{y:.2f}"},{"customdata":["quadratic model"],"line":{"color":"grey","dash":"dash","width":2},"showlegend":false,"visible":true,"x":[0.0,0.5,1.0,1.5,2.0,2.5,3.0,3.5],"y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"type":"scatter","xaxis":"x2","yaxis":"y2","hovertemplate":"Signal: %{y:.2f}"},{"customdata":["rational model"],"marker":{"color":"#00CC96"},"mode":"lines","name":"rational model","visible":false,"x":[0.0,0.03535353535353535,0.0707070707070707,0.10606060606060605,0.1414141414141414,0.17676767676767677,0.2121212121212121,0.24747474747474746,0.2828282828282828,0.3181818181818182,0.35353535353535354,0.3888888888888889,0.4242424242424242,0.45959595959595956,0.4949494949494949,0.5303030303030303,0.5656565656565656,0.601010101010101,0.6363636363636364,0.6717171717171717,0.7070707070707071,0.7424242424242424,0.7777777777777778,0.8131313131313131,0.8484848484848484,0.8838383838383838,0.9191919191919191,0.9545454545454545,0.9898989898989898,1.0252525252525253,1.0606060606060606,1.095959595959596,1.1313131313131313,1.1666666666666665,1.202020202020202,1.2373737373737372,1.2727272727272727,1.308080808080808,1.3434343434343434,1.3787878787878787,1.4141414141414141,1.4494949494949494,1.4848484848484849,1.52020202020202,1.5555555555555556,1.5909090909090908,1.6262626262626263,1.6616161616161615,1.6969696969696968,1.7323232323232323,1.7676767676767675,1.803030303030303,1.8383838383838382,1.8737373737373737,1.909090909090909,1.9444444444444444,1.9797979797979797,2.015151515151515,2.0505050505050506,2.0858585858585856,2.121212121212121,2.1565656565656566,2.191919191919192,2.227272727272727,2.2626262626262625,2.297979797979798,2.333333333333333,2.3686868686868685,2.404040404040404,2.4393939393939394,2.4747474747474745,2.51010101010101,2.5454545454545454,2.580808080808081,2.616161616161616,2.6515151515151514,2.686868686868687,2.7222222222222223,2.7575757575757573,2.792929292929293,2.8282828282828283,2.8636363636363633,2.898989898989899,2.9343434343434343,2.9696969696969697,3.0050505050505047,3.04040404040404,3.0757575757575757,3.111111111111111,3.146464646464646,3.1818181818181817,3.217171717171717,3.2525252525252526,3.2878787878787876,3.323232323232323,3.3585858585858586,3.3939393939393936,3.429292929292929,3.4646464646464645,3.5],"y":[-0.009612113237380981,0.031219427657497023,0.07184440189009086,0.11226437303567319,0.15248088892890174,0.19249548186139914,0.2323096687763645,0.27192495146026796,0.31134281673167935,0.350564736627281,0.38959216858511375,0.42842655562510296,0.4670693265269128,0.5055218960051747,0.5437856648821335,0.581862020257758,0.6197523356773578,0.6574579712967478,0.694980274045006,0.7323205777848614,0.7694802034707531,0.8064604593046025,0.8432626408893329,0.879888031380179,0.9163379016338191,0.9526135103553695,0.9887161042432748,1.024646918132131,1.0604071751334743,1.095998086774569,1.1314208531352288,1.166676662982706,1.2017666939046716,1.2366921124403314,1.2714540742096963,1.3060537240410421,1.3404921960965914,1.3747706139964386,1.4088900909407551,1.4428517298302947,1.4766566233852354,1.5103058542623735,1.543800495170708,1.5771416089854313,1.61033024886036,1.643367458338822,1.6762542714630349,1.7089917128819883,1.741580797957863,1.7740225328710075,1.8063179147234885,1.8384679316412498,1.8704735628748899,1.9023357788990878,1.9340555415106937,1.9656338039255068,1.997071510873762,2.0283695986943435,2.0595289954277463,2.090550620907804,2.121435386852204,2.152184196951807,2.1827979469587855,2.21327752477361,2.2436238105308925,2.2738376766840984,2.303919988089165,2.3338716020870183,2.3636933685850243,2.3933861301373787,2.4229507220244573,2.4523879723311435,2.481698702024141,2.5108837250282954,2.539943848301932,2.5688798719112373,2.5976925891036773,2.626382786380487,2.6549512435682376,2.6833987338894913,2.711726024032562,2.739933874220389,2.768023038278555,2.7959942637024278,2.823848291723474,2.851585857374734,2.8792076895554786,2.906714511095057,2.9341070388159487,2.961385983596035,2.9885520504300946,3.0156059384905323,3.042548341187368,3.0693799462274773,3.0961014356731056,3.1227134859996597,3.1492167681527974,3.175611947604817,3.201899684410347,3.2280806332613774],"type":"scatter","xaxis":"x","yaxis":"y","hovertemplate":"Signal: %{y:.2f}"},{"customdata":["rational model"],"hoverinfo":"skip","marker":{"color":"#00CC96"},"mode":"markers","name":"Residuals","visible":false,"x":[0.0,0.5,1.0,1.5,2.0,2.5,3.0,3.5],"y":[-0.029612113237380982,0.040236586335457236,-0.0054067655252809654,0.02410828155456546,0.006973168991768919,-0.038009724577217074,-0.050369549346791054,0.05208063326137724],"type":"scatter","xaxis":"x2","yaxis":"y2","hovertemplate":"Signal: %{y:.2f}"},{"customdata":["rational model"],"line":{"color":"grey","dash":"dash","width":2},"showlegend":false,"visible":true,"x":[0.0,0.5,1.0,1.5,2.0,2.5,3.0,3.5],"y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"type":"scatter","xaxis":"x2","yaxis":"y2","hovertemplate":"Signal: %{y:.2f}"},{"customdata":["linear model"],"marker":{"color":"#AB63FA"},"mode":"lines","name":"linear model","visible":false,"x":[0.0,0.03535353535353535,0.0707070707070707,0.10606060606060605,0.1414141414141414,0.17676767676767677,0.2121212121212121,0.24747474747474746,0.2828282828282828,0.3181818181818182,0.35353535353535354,0.3888888888888889,0.4242424242424242,0.45959595959595956,0.4949494949494949,0.5303030303030303,0.5656565656565656,0.601010101010101,0.6363636363636364,0.6717171717171717,0.7070707070707071,0.7424242424242424,0.7777777777777778,0.8131313131313131,0.8484848484848484,0.8838383838383838,0.9191919191919191,0.9545454545454545,0.9898989898989898,1.0252525252525253,1.0606060606060606,1.095959595959596,1.1313131313131313,1.1666666666666665,1.202020202020202,1.2373737373737372,1.2727272727272727,1.308080808080808,1.3434343434343434,1.3787878787878787,1.4141414141414141,1.4494949494949494,1.4848484848484849,1.52020202020202,1.5555555555555556,1.5909090909090908,1.6262626262626263,1.6616161616161615,1.6969696969696968,1.7323232323232323,1.7676767676767675,1.803030303030303,1.8383838383838382,1.8737373737373737,1.909090909090909,1.9444444444444444,1.9797979797979797,2.015151515151515,2.0505050505050506,2.0858585858585856,2.121212121212121,2.1565656565656566,2.191919191919192,2.227272727272727,2.2626262626262625,2.297979797979798,2.333333333333333,2.3686868686868685,2.404040404040404,2.4393939393939394,2.4747474747474745,2.51010101010101,2.5454545454545454,2.580808080808081,2.616161616161616,2.6515151515151514,2.686868686868687,2.7222222222222223,2.7575757575757573,2.792929292929293,2.8282828282828283,2.8636363636363633,2.898989898989899,2.9343434343434343,2.9696969696969697,3.0050505050505047,3.04040404040404,3.0757575757575757,3.111111111111111,3.146464646464646,3.1818181818181817,3.217171717171717,3.2525252525252526,3.2878787878787876,3.323232323232323,3.3585858585858586,3.3939393939393936,3.429292929292929,3.4646464646464645,3.5],"y":[0.09916660189628601,0.13176677037369122,0.1643669388510964,0.1969671073285016,0.2295672758059068,0.262167444283312,0.29476761276071717,0.3273677812381224,0.3599679497155276,0.3925681181929328,0.425168286670338,0.4577684551477432,0.4903686236251484,0.5229687921025536,0.5555689605799587,0.5881691290573641,0.6207692975347692,0.6533694660121744,0.6859696344895796,0.7185698029669848,0.75116997144439,0.7837701399217952,0.8163703083992004,0.8489704768766057,0.8815706453540108,0.914170813831416,0.9467709823088212,0.9793711507862264,1.0119713192636315,1.0445714877410368,1.0771716562184421,1.1097718246958472,1.1423719931732523,1.1749721616506574,1.2075723301280628,1.2401724986054679,1.2727726670828732,1.3053728355602783,1.3379730040376836,1.3705731725150887,1.403173340992494,1.4357735094698991,1.4683736779473044,1.5009738464247095,1.5335740149021149,1.56617418337952,1.5987743518569253,1.6313745203343304,1.6639746888117355,1.6965748572891408,1.729175025766546,1.7617751942439512,1.7943753627213563,1.8269755311987617,1.8595756996761668,1.892175868153572,1.9247760366309772,1.9573762051083825,1.9899763735857878,2.0225765420631925,2.0551767105405983,2.087776879018003,2.1203770474954085,2.1529772159728133,2.1855773844502187,2.218177552927624,2.250777721405029,2.283377889882434,2.3159780583598395,2.348578226837245,2.3811783953146497,2.413778563792055,2.4463787322694603,2.4789789007468657,2.5115790692242705,2.544179237701676,2.576779406179081,2.6093795746564865,2.6419797431338914,2.6745799116112967,2.707180080088702,2.739780248566107,2.7723804170435122,2.8049805855209176,2.837580753998323,2.8701809224757278,2.902781090953133,2.9353812594305384,2.9679814279079437,3.0005815963853486,3.033181764862754,3.0657819333401592,3.0983821018175646,3.1309822702949694,3.1635824387723748,3.19618260724978,3.228782775727185,3.2613829442045903,3.2939831126819956,3.326583281159401],"type":"scatter","xaxis":"x","yaxis":"y","hovertemplate":"Signal: %{y:.2f}"},{"customdata":["linear model"],"hoverinfo":"skip","marker":{"color":"#AB63FA"},"mode":"markers","name":"Residuals","visible":false,"x":[0.0,0.5,1.0,1.5,2.0,2.5,3.0,3.5],"y":[0.079166601896286,0.05122612750530242,-0.05471434688568122,-0.051654821276664764,-0.06459529566764832,-0.0775357700586321,-0.03247624444961561,0.15058328115940078],"type":"scatter","xaxis":"x2","yaxis":"y2","hovertemplate":"Signal: %{y:.2f}"},{"customdata":["linear model"],"line":{"color":"grey","dash":"dash","width":2},"showlegend":false,"visible":true,"x":[0.0,0.5,1.0,1.5,2.0,2.5,3.0,3.5],"y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"type":"scatter","xaxis":"x2","yaxis":"y2","hovertemplate":"Signal: %{y:.2f}"}],"layout":{"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"xaxis":{"anchor":"y","domain":[0.0,0.425]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"NADH (E\u003csub\u003e420 nm\u003c\u002fsub\u003e)"}},"xaxis2":{"anchor":"y2","domain":[0.575,1.0]},"yaxis2":{"anchor":"x2","domain":[0.0,1.0],"title":{"text":"Residuals NADH (E\u003csub\u003e420 nm\u003c\u002fsub\u003e)"}},"annotations":[{"font":{"size":16},"showarrow":false,"text":"Standard","x":0.2125,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Model Residuals","x":0.7875,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"NADH \u002f mmol \u002f l","x":0.5,"xanchor":"center","xref":"paper","y":0,"yanchor":"top","yref":"paper","yshift":-30}],"margin":{"l":20,"r":20,"t":100,"b":60},"updatemenus":[{"active":0,"buttons":[{"args":[{"visible":[true,false,false,false,false,false,false,false,false,false,false,false,false]}],"label":"NADH standard","method":"update"},{"args":[{"visible":[true,true,true,true,false,false,false,false,false,false,false,false,false],"title":"cubic model"}],"label":"cubic model","method":"update"},{"args":[{"visible":[true,false,false,false,true,true,true,false,false,false,false,false,false],"title":"quadratic model"}],"label":"quadratic model","method":"update"},{"args":[{"visible":[true,false,false,false,false,false,false,true,true,true,false,false,false],"title":"rational model"}],"label":"rational model","method":"update"},{"args":[{"visible":[true,false,false,false,false,false,false,false,false,false,true,true,true],"title":"linear model"}],"label":"linear model","method":"update"},{"args":[{"visible":[true,true,true,true,true,true,true,true,true,true,true,true,true]}],"label":"all","method":"update"}],"direction":"right","type":"buttons","x":0,"xanchor":"left","y":1.2,"yanchor":"top"}]}}</div>
+<h3 id="concentration-calculation">Concentration calculation<a class="headerlink" href="#concentration-calculation" title="Permanent link">¶</a></h3>
+<p>For concentration calculation, one of the fitted models can be chosen and given to the <code>calculate_concentrations</code> method. The data of unknown signals is provided as a list. By default, concentrations are only calculated if the signal is within the calibration range, which is based on the calibration data. Optionally, extrapolation can be enabled by setting <code>extrapolate=True</code>. </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">concentrations</span> <span class="o">=</span> <span class="n">calibrator</span><span class="o">.</span><span class="n">calculate_concentrations</span><span class="p">(</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="n">model</span><span class="o">=</span><span class="n">cubic</span><span class="p">,</span> <span class="n">signals</span><span class="o">=</span><span class="p">[</span><span class="mf">0.509</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">extrapolate</span><span class="o">=</span><span class="kc">False</span>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">)</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">concentrations</span><span class="p">)</span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="c1"># -&gt; [0.48576600549464755, 0.8658856333797263, nan]</span>
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Extrapolation</p>
+<p>The <code>calculate_concentrations</code> method returns a list of concentrations. If a signal is outside the calibration range, the concentration is set to <code>nan</code>.
+Extrapolation can be enabled by setting <code>extrapolate=True</code>.</p>
+</div>
+<h3 id="serialization">Serialization<a class="headerlink" href="#serialization" title="Permanent link">¶</a></h3>
+<p>Finally, the data of the calibrator can be enriched with additional information on the calibrated molecule and the measurement conditions to form a valid <code>Standard</code>. This is done by using the <code>create_standard</code> method. This method expects a <code>ph</code>, <code>temperature</code>, <code>temp_unit</code>, as well as the chosen <code>model</code>. Furthermore, the <code>retention_time</code> can be provided to further characterize the context of the calibration. </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">calipytion.units</span><span class="w"> </span><span class="kn">import</span> <span class="n">C</span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">standard</span> <span class="o">=</span> <span class="n">calibrator</span><span class="o">.</span><span class="n">create_standard</span><span class="p">(</span>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>    <span class="n">ph</span><span class="o">=</span><span class="mf">7.4</span><span class="p">,</span>
+</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a>    <span class="n">temperature</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span>
+</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>    <span class="n">temp_unit</span><span class="o">=</span><span class="n">C</span><span class="p">,</span>
+</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a>    <span class="n">retention_time</span><span class="o">=</span><span class="mf">7.53</span>
+</span><span id="__span-7-8"><a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="p">)</span>
+</span><span id="__span-7-9"><a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="c1"># save the standard as a JSON file</span>
+</span><span id="__span-7-11"><a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"abts_standard.json"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-7-12"><a href="#__codelineno-7-12" id="__codelineno-7-12" name="__codelineno-7-12"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">standard</span><span class="o">.</span><span class="n">model_dump_json</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+</span></code></pre></div>
+<h3 id="applying-a-calibrator-to-an-enzymeml-document">Applying a calibrator to an EnzymeML Document<a class="headerlink" href="#applying-a-calibrator-to-an-enzymeml-document" title="Permanent link">¶</a></h3>
+<p>The <code>Calibrator</code> can be applied to an <code>EnzymeMLDocument</code> to calculate concentrations of signals. This is done by using the <code>apply_to_enzymeml</code> method. The method expects an <code>EnzymeMLDocument</code> as input. Optionally, the <code>extrapolate</code> parameter can be set to enable extrapolation. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In order to apply a calibrator to an <code>EnzymeMLDocument</code>, the measurement data within the <code>EnzymeMLDocument</code> must reference the same molecule. Therefore, the <code>species_id</code> in the <code>EnzymeMLDocument</code> must match the <code>molecule_id</code> of the <code>Calibrator</code>. The <code>EnzymeMLDocument</code> must be an instance of <code>pyenzyme.EnzymeMLDocument</code>.</p>
+</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pyenzyme</span><span class="w"> </span><span class="kn">import</span> <span class="n">EnzymeMLDocument</span>
+</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"data/enzymeml.json"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-8-5"><a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a>    <span class="n">enzmldoc</span> <span class="o">=</span> <span class="n">EnzymeMLDocument</span><span class="p">(</span><span class="o">**</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</span><span id="__span-8-6"><a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="n">calibrator</span><span class="o">.</span><span class="n">apply_to_enzymeml</span><span class="p">(</span><span class="n">enzmldoc</span><span class="p">,</span> <span class="n">extrapolate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></code></pre></div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.links", "content.code.select", "content.code.copy", "content.code.annotation"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+<span hidden="True" id="default-template-settings">{"font.color": "#2a3f5f", "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "#E5ECF6", "polar.bgcolor": "#E5ECF6", "polar.angularaxis.gridcolor": "white", "polar.angularaxis.linecolor": "white", "polar.radialaxis.gridcolor": "white", "polar.radialaxis.linecolor": "white", "ternary.bgcolor": "#E5ECF6", "ternary.aaxis.gridcolor": "white", "ternary.aaxis.linecolor": "white", "ternary.baxis.gridcolor": "white", "ternary.baxis.linecolor": "white", "ternary.caxis.gridcolor": "white", "ternary.caxis.linecolor": "white", "xaxis.gridcolor": "white", "xaxis.linecolor": "white", "xaxis.zerolinecolor": "white", "yaxis.gridcolor": "white", "yaxis.linecolor": "white", "yaxis.zerolinecolor": "white", "scene.xaxis.backgroundcolor": "#E5ECF6", "scene.xaxis.gridcolor": "white", "scene.xaxis.linecolor": "white", "scene.xaxis.zerolinecolor": "white", "scene.yaxis.backgroundcolor": "#E5ECF6", "scene.yaxis.gridcolor": "white", "scene.yaxis.linecolor": "white", "scene.yaxis.zerolinecolor": "white", "scene.zaxis.backgroundcolor": "#E5ECF6", "scene.zaxis.gridcolor": "white", "scene.zaxis.linecolor": "white", "scene.zaxis.zerolinecolor": "white", "shapedefaults.line.color": "#2a3f5f", "annotationdefaults.arrowcolor": "#2a3f5f", "geo.bgcolor": "white", "geo.landcolor": "#E5ECF6", "geo.subunitcolor": "white", "geo.lakecolor": "white", "mapbox.style": "light"}</span><span hidden="True" id="slate-template-settings">{"font.color": "#f2f5fa", "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgb(17,17,17)", "polar.bgcolor": "rgb(17,17,17)", "polar.angularaxis.gridcolor": "#506784", "polar.angularaxis.linecolor": "#506784", "polar.radialaxis.gridcolor": "#506784", "polar.radialaxis.linecolor": "#506784", "ternary.bgcolor": "rgb(17,17,17)", "ternary.aaxis.gridcolor": "#506784", "ternary.aaxis.linecolor": "#506784", "ternary.baxis.gridcolor": "#506784", "ternary.baxis.linecolor": "#506784", "ternary.caxis.gridcolor": "#506784", "ternary.caxis.linecolor": "#506784", "xaxis.gridcolor": "#283442", "xaxis.linecolor": "#506784", "xaxis.zerolinecolor": "#283442", "yaxis.gridcolor": "#283442", "yaxis.linecolor": "#506784", "yaxis.zerolinecolor": "#283442", "scene.xaxis.backgroundcolor": "rgb(17,17,17)", "scene.xaxis.gridcolor": "#506784", "scene.xaxis.linecolor": "#506784", "scene.xaxis.zerolinecolor": "#C8D4E3", "scene.yaxis.backgroundcolor": "rgb(17,17,17)", "scene.yaxis.gridcolor": "#506784", "scene.yaxis.linecolor": "#506784", "scene.yaxis.zerolinecolor": "#C8D4E3", "scene.zaxis.backgroundcolor": "rgb(17,17,17)", "scene.zaxis.gridcolor": "#506784", "scene.zaxis.linecolor": "#506784", "scene.zaxis.zerolinecolor": "#C8D4E3", "shapedefaults.line.color": "#f2f5fa", "annotationdefaults.arrowcolor": "#f2f5fa", "geo.bgcolor": "rgb(17,17,17)", "geo.landcolor": "rgb(17,17,17)", "geo.subunitcolor": "#506784", "geo.lakecolor": "rgb(17,17,17)", "mapbox.style": "dark"}</span><script src="../assets/javascripts/mkdocs-plotly-plugin.js"></script></body>
+</html>
